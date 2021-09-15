@@ -9,6 +9,7 @@
 
 .header {
   height: 100vh;
+  margin-bottom: 200px;
   .container {
     max-width: 1790px;
   }
@@ -129,8 +130,6 @@
     right: 80px;
     display: flex;
   }
-  &__slider-dots {
-  }
   &__dot {
     height: 60px;
     text-align: right;
@@ -158,6 +157,146 @@
   }
   &__slide-active {
     opacity: 1;
+  }
+}
+
+// ==================================CONTENT======================================
+// ==================================CONTENT======================================
+
+.content-item {
+  padding: 240px 0px 0;
+  &--img-right {
+    .content-item__body {
+      margin: 0 0 0 114px;
+    }
+    .content-item__image {
+      order: -1;
+    }
+  }
+  &__inner {
+    display: flex;
+    position: relative;
+  }
+  &__body {
+    margin-right: 114px;
+    padding-left: 150px;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  &__number {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    font-size: 240px;
+    line-height: 240px;
+    opacity: 0.1;
+  }
+  &__subtitle {
+    @extend %g-800;
+    color: $accent;
+    line-height: 22px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    position: relative;
+    padding-left: 96px;
+    margin: 0px 0px 27px 0px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: calc(50% - 1px);
+      left: 0;
+      height: 2px;
+      width: 72px;
+      background-color: $accent;
+    }
+  }
+  &__title {
+    @extend %cd-600;
+    font-size: 64px;
+    line-height: 77px;
+    margin: 0px 0px 27px 0px;
+  }
+  &__text {
+    margin: 0px 0px 27px 0px;
+  }
+  &__link {
+    line-height: 22px;
+    color: $accent;
+    padding-right: 40px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 2px;
+      right: 0;
+      height: 16px;
+      width: 24px;
+      background: url("../images/icons/arrow-right-accent.svg") center / cover no-repeat;
+    }
+  }
+  &__image {
+    flex: 0 0 auto;
+    position: relative;
+    width: 566px;
+    padding: 0px 0px 49.4% 0px;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+// ==================================FOOTER======================================
+// ==================================FOOTER======================================
+
+.footer {
+  padding: 200px 0 120px;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 50%;
+  }
+  &__logo-link {
+    margin-bottom: 24px;
+  }
+  &__logo-img {
+  }
+  &__text {
+    margin-bottom: auto;
+  }
+  &__copy {
+    @extend %g-500;
+    opacity: 0.5;
+  }
+  &__col {
+    &:nth-child(2) {
+      margin-right: 45px;
+    }
+  }
+  &__title {
+    font-size: 24px;
+    color: $accent;
+    margin-bottom: 24px;
+  }
+  &__list {
+  }
+  &__list-item {
+    margin-bottom: 16px;
+    &:last-child {
+      margin: 0;
+    }
+  }
+  &__list-link {
+    @extend %g-500;
   }
 }
 
