@@ -4,12 +4,161 @@
 @import "libs";
 @import "global";
 
+// ==================================HEADER======================================
+// ==================================HEADER======================================
 
-
-
-
-
-
-
+.header {
+  height: 100vh;
+  .container {
+    max-width: 1790px;
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 64px 0;
+    margin: 0px 0px 136px 0px;
+  }
+  &__logo-link {
+    margin-right: 10px;
+  }
+  &__menu-list {
+    display: flex;
+  }
+  &__menu-item {
+    margin-right: 40px;
+    &:last-child {
+      margin: 0;
+    }
+  }
+  &__menu-link {
+    line-height: 22px;
+  }
+  &__user-account {
+    display: block;
+    margin-left: 10px;
+    position: relative;
+    padding-left: 30px;
+    font-size: 17px;
+    line-height: 21px;
+    @extend %g-500;
+    svg {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      path {
+        transition: all 0.3s;
+      }
+    }
+    &:hover {
+      color: $accent;
+      path {
+        fill: $accent;
+      }
+    }
+  }
+  &__body {
+    position: relative;
+  }
+  &__socials {
+    writing-mode: vertical-lr;
+    line-height: 0;
+    padding-top: 72px;
+    position: fixed;
+  }
+  &__socials-link {
+    display: inline-block;
+    margin-top: 24px;
+    path {
+      transition: all 0.3s;
+    }
+    &:hover {
+      path {
+        fill: $accent;
+      }
+    }
+  }
+  &__content {
+    max-width: 950px;
+    margin: 0 auto;
+  }
+  &__subtitle {
+    @extend %g-800;
+    color: $accent;
+    line-height: 22px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    position: relative;
+    padding-left: 104px;
+    margin: 0px 0px 32px 0px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: calc(50% - 1px);
+      left: 0;
+      height: 2px;
+      width: 72px;
+      background-color: $accent;
+    }
+  }
+  &__title {
+    @extend %cd-600;
+    font-size: 88px;
+    line-height: 100px;
+    text-transform: capitalize;
+    margin: 0px 0px 32px 0px;
+  }
+  &__text {
+    line-height: 22px;
+    position: relative;
+    display: inline-block;
+    padding-right: 33px;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 24px;
+      width: 16px;
+      background: url(../images/icons/arrow-down.svg) center / cover no-repeat;
+    }
+  }
+  &__slider-wrapper {
+    position: fixed;
+    top: 326px;
+    right: 80px;
+    display: flex;
+  }
+  &__slider-dots {
+  }
+  &__dot {
+    height: 60px;
+    text-align: right;
+  }
+  &__dot-link {
+    display: block;
+    line-height: 60px;
+    padding-right: 32px;
+  }
+  &__slider {
+    .slick-list {
+      max-width: 3px;
+    }
+    .slick-slide {
+      border: none;
+      width: 3px;
+      height: 60px;
+    }
+  }
+  &__slide {
+    width: 3px;
+    height: 60px;
+    background-color: #fff;
+    opacity: 0.5;
+  }
+  &__slide-active {
+    opacity: 1;
+  }
+}
 
 @import "media";

@@ -1,0 +1,32 @@
+body {
+  @extend %g-700;
+  font-size: 18px;
+  line-height: 32px;
+  background-color: $bgc;
+  color: #fff;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  background: url(../images/main-bg.jpg) 23% 0% / cover no-repeat;
+}
+
+.container {
+  max-width: 1490px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: inline-block;
+  width: 108px;
+  height: 24px;
+}
+
+a {
+  transition: all .3s;
+  &:hover {
+    color: $accent;
+  }
+}
