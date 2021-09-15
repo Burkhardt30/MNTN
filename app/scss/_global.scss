@@ -9,7 +9,21 @@ body {
 .wrapper {
   min-height: 100%;
   overflow: hidden;
-  background: url(../images/main-bg.jpg) 23% 0% no-repeat;
+  position: relative;
+  // background: url(../images/main-bg.jpg) 23% 0% no-repeat;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  img {
+    width: 100%;
+    min-height: 800px;
+    object-fit: cover;
+    object-position: 23% 0%;
+  }
 }
 
 .container {
